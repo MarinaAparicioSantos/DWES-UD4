@@ -83,3 +83,13 @@ Poe Dameron,NA,NA,brown,light,brown,NA,male,NA,Human
 BB8,NA,NA,none,none,black,NA,none,NA,Droid
 Captain Phasma,NA,NA,unknown,unknown,unknown,NA,female,NA,NA
 Padmé Amidala,165,45,brown,light,brown,46,female,Naboo,Human
+
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
+Marina Aparicio,160,74,brown,fair,green,21,female,Earth,Human
