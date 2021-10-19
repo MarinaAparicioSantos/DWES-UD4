@@ -14,6 +14,17 @@
 
     $informacion = simplexml_load_file("archivoXml.xml");
 
+    $mybook=$informacion->addChild("book");
+    $mybook->addAttribute("id","2233");
+    $mybook->addChild("author","marina");
+    $mybook->addChild("title","bajo la misma estrella");
+    $mybook->addChild("genre","romance");
+    $mybook->addChild("price","16");
+    $mybook->addChild("publish_date","2016-05-31");
+    $mybook->addChild("description","dos personas que se enfrentan al cáncer se enamoran");
+    $informacion ->asXML("archivoXml.xml");
+
+    
 
     printf("Autor: %s<br>",$informacion->book[1]->author);
     printf("Titulo: %s<br>",$informacion->book[1]->title);
@@ -43,12 +54,7 @@
     
     }
 
-$informacion = new SimpleXMLElement('usuarios.xml', 0, true);
-// Usuario 0 antes de cambiar:
-echo "Nombre: " . $informacion->usuario[0]->nombre . "<br>";
-// Usuario 0 cambiando el nombre:
-$informacion->usuario[0]->nombre = "María";
-echo "Nombre: " . $informacion->usuario[0]->nombre . "<br>";
+
 
 ?>
 </table>
