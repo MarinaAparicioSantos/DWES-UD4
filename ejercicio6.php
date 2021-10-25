@@ -11,17 +11,13 @@
     <?php
 
         function creaConexion(){
-
+            
             @$mysqli = mysqli_connect('localhost','developer','developer','agenciaviajes');
+
             $error = mysqli_connect_errno($mysqli);
-
-            if ($error!=null){
-
-                echo "<p>Error $error conectando a la base de datos:",mysqli_connect_error($mysqli),"</p>";
+            if($error!=null){
+                echo "<p>Error $error conectando a la base de datos:",mysqli_connect_error(),"</p>";
                 exit();
-            }else{
-                echo "conectando correctamente";
-                echo "<br>";
             }
 
         }
