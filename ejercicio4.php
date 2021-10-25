@@ -134,22 +134,22 @@
                 echo "<tr>";
 
                     echo "<td>";
-                    printf("%s ",$fila[0]);
+                    printf("%s ",$fila["Origen"]);
                     echo "</td>";
                     echo "<td>";
-                    printf("%s",$fila[1]);
+                    printf("%s",$fila["Destino"]);
                     echo "</td>";
                     echo "<td>";
-                    printf("%s",$fila[2]);
+                    printf("%s",$fila["Fecha"]);
                     echo "</td>";
                     echo "<td>";
-                    printf("%s",$fila[3]);
+                    printf("%s",$fila["Companya"]);
                     echo "</td>";
                     echo "<td>";
-                    printf("%s",$fila[4]);
+                    printf("%s",$fila["ModeloAvion"]);
                     echo "</td>";
                     echo "<td>";
-                    printf("%s",$fila[5]);
+                    printf("%s",$fila["id"]);
                     echo "</td>";
 
                 echo "</tr>";
