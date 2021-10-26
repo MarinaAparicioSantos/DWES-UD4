@@ -14,19 +14,18 @@
     function creaConexion()
     {
 
-    
+
         $servername = "localhost";
         $username = "developer";
         $password = "developer";
-        
+
         // Create connection
         $conn = new mysqli($servername, $username, $password);
-        
+
         // Check connection
         if ($conn->connect_error) {
             echo "no funciona";
-          die("Connection failed: " . $conn->connect_error);
-
+            die("Connection failed: " . $conn->connect_error);
         }
         echo "Connected successfully";
 
@@ -47,6 +46,26 @@
 
         //     return $mysqli;
         // }
+    }
+
+    function creaVuelo($Origen, $Destino, $Fecha, $Companya, $ModeloAvion)
+    {
+    }
+
+    function modificaDestino($id, $Destino)
+    {
+    }
+
+    function modificaCompanya($id, $Companya)
+    {
+    }
+
+    function eliminaVuelos($id)
+    {
+    }
+
+    function extraeVuelos()
+    {
     }
     ?>
 
