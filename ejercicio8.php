@@ -12,76 +12,147 @@
 
     <?php
 
-    $servidor = "localhost";
-    $baseDatos = "agenciaviajes";
-    $usuario = "developer";
-    $pass = "developer";
-    try {
-        $conexion = new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
-        echo "Conectado correctamente";
-        echo "<br>";
-        $sql = "SELECT * FROM turista";
-        $turistas = $conexion->query($sql);
+    
+$servidor = "localhost";
+$baseDatos = "agenciaviajes";
+$usuario = "developer";
+$pass = "developer";
 
-        echo "<table border = \"1\">";
+try {
+    $conexion = new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
+    echo "Conectado correctamente";
+    echo "<br>";
+    $sql = "SELECT nombre, apellido1, direccion FROM turista";
+
+
+    function cabeceraWapa() {
+        echo "<table border = 2>";
         echo "<th>Nombre</th>";
-        echo "<th>Apellido1</th>";
-        echo "<th>Direccion</th>";
-
-        while ($turista = $turistas->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr>";
-
-            echo "<td>";
-            echo $turista["nombre"];
-            echo "</td>";
-
-            echo "<td>";
-            echo $turista["apellido1"];
-            echo "</td>";
-
-            echo "<td>";
-            echo $turista["direccion"];
-            echo "</td>";
-
-            echo "</tr>";
-        }
-
-        echo "</table>";
-
-
-
-        echo "<table border = \"1\">";
-        echo "<th>Nombre</th>";
-        echo "<th>Apellido1</th>";
-        echo "<th>Direccion</th>";
-
-        while ($turista = $turistas->fetch(PDO::FETCH_NUM)) {
-
-            $dato1 = $turista[1];
-            $dato2 = $turista[2];
-            $dato3 = $turista[4];
-            echo "<tr>";
-
-            echo "<td>";
-            echo $dato1;
-            echo "</td>";
-
-            echo "<td>";
-            echo $dato2;
-            echo "</td>";
-
-            echo "<td>";
-            echo $dato3;
-            echo "</td>";
-
-            echo "</tr>";
-        }
-
-        echo "</table>";
-    } catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+        echo "<th>Apellido</th>";
+        echo "<th>Dirección</th>";
     }
-    //$conn = null;
+
+    cabeceraWapa();
+    $turistas = $conexion->query($sql);
+
+    while ($turista = $turistas->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr>";
+        echo "<td>";
+        echo $turista['nombre'];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista['apellido1'];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista['direccion'];
+        echo "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
+    cabeceraWapa();
+    $turistas = $conexion->query($sql);
+    
+    while ($turista = $turistas->fetch(PDO::FETCH_NUM)) {
+        echo "<tr>";
+        echo "<td>";
+        echo $turista[0];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista[1];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista[2];
+        echo "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
+    cabeceraWapa();
+    $turistas = $conexion->query($sql);
+
+    while ($turista = $turistas->fetch(PDO::FETCH_BOTH)) {
+        echo "<tr>";
+        echo "<td>";
+        echo $turista[0];
+        echo "</td>";
+        echo "<td>";
+        echo $turista[1];
+        echo "</td>";
+        echo "<td>";
+        echo $turista[2];
+        echo "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
+    cabeceraWapa();
+    $turistas = $conexion->query($sql);
+
+    while ($turista = $turistas->fetch(PDO::FETCH_OBJ)) {
+        echo "<tr>";
+        echo "<td>";
+        echo $turista->nombre;
+        echo "</td>";
+        echo "<td>";
+        echo $turista->apellido1;
+        echo "</td>";
+        echo "<td>";
+        echo $turista->direccion;
+        echo "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
+    cabeceraWapa();
+    $turistas = $conexion->query($sql);
+
+    while ($turista = $turistas->fetch(PDO::FETCH_LAZY)) {
+        echo "<tr>";
+        echo "<td>";
+        echo $turista['nombre'];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista['apellido1'];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista['direccion'];
+        echo "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
+    cabeceraWapa();
+    $turistas = $conexion->query($sql); // FETCH_BOUND USA BIND COLUMNS¿? ¿?¿?¿' XD WT
+
+    while ($turista = $turistas->fetch(PDO::FETCH_BOUND)) {
+        echo "<tr>";
+        echo "<td>";
+        echo $turista['nombre'];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista['apellido1'];
+        echo "</td>";
+
+        echo "<td>";
+        echo $turista['direccion'];
+        echo "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+//$conn = null;
+?>
     ?>
 
 </body>

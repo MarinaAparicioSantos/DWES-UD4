@@ -13,17 +13,17 @@
     <?php
 
     $servidor = "localhost";
-    $baseDatos = "agenciaviajes";
+    $baseDatos = "directorioanime";
     $usuario = "developer";
     $pass = "developer";
     try {
         $conexion = new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
         echo "Conectado correctamente";
         echo "<br>";
-        $sql = "INSERT INTO turista (nombre, apellido1, apellido2, direccion, telefono) VALUES ('Marina','Aparicio','Santos','El Viso del Alcor','667308967')";
+/*         $sql = "INSERT INTO turista (nombre, apellido1, apellido2, direccion, telefono) VALUES ('Marina','Aparicio','Santos','El Viso del Alcor','667308967')";
         $numeroClientes=$conexion->exec($sql);
         $last_id = $conexion->lastInsertId();
-        echo "Se han añadido $numeroClientes cliente nuevo con el id: $last_id.";
+        echo "Se han añadido $numeroClientes cliente nuevo con el id: $last_id."; */
         
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
