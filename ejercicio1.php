@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
 </head>
-<table border = 1>
+<table border = "1">
 <body>
 
     <?php
 
 $archivo = fopen("archivo.txt", "r");
 
-        while (!feof($archivo)){
+       /*  while (!feof($archivo)){
     
             $linea = fgets($archivo);
             echo $linea, "<br>";
@@ -26,15 +26,33 @@ $archivo = fopen("archivo.txt", "r");
         fwrite($archivo, "\nMarina Aparicio,160,74,brown,fair,green,21,female,Earth,Human");
 
 
-        while (!feof($archivo)){
-    
-            $linea = fgets($archivo);
-            $division = explode(",", $linea);
-            echo "<tr>";
-            echo "<td>",$division[0],"<br></td>";
-            echo "<td>",$division[1],"<br></td>";
-            echo "</tr>";
+        while (feof($file) != true) {
+            echo ("<tr>");
+            $personaje = fgets($file);
+            echo ("<td> $personaje</td>");
+            echo ("</tr>");
+        } */
+
+
+        $file = fopen("archivo.txt", "r");
+
+        echo ("<table border = 2");
+        while (feof($file) != true) {
+            echo ("<tr>");
+            $personaje = fgets($file);
+            echo ("<td> $personaje</td>");
+            echo ("</tr>");
         }
+    
+    
+        fclose($file);
+    
+        $file = fopen("personajes.txt", "a+");
+        fwrite($archivo, "\nMarina Aparicio,160,74,brown,fair,green,21,female,Earth,Human");
+        fclose($file);
+
+
+        
         
 
     ?>

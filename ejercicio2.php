@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2</title>
 </head>
-<table border = 1>
+<table border = "1">
 <body>
 
     <?php
