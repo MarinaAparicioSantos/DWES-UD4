@@ -28,6 +28,10 @@
         $sql = "UPDATE turista SET nombre='Melodia',apellido1='Flores',apellido2='Rosa',direccion='Carmona',telefono='607999451'WHERE id=2 OR id=3";
         $numeroClientesActualizados=$conexion->exec($sql);
         echo "Se han modificado $numeroClientesActualizados clientes.";
+        $sql = "DELETE FROM turista WHERE id=1";
+        $numeroClientesBorrados=$conexion->exec($sql);
+        $last_id = $conexion->lastInsertId();
+        echo "Se han eliminado $numeroClientesBorrados clientes.";
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
