@@ -8,6 +8,8 @@
 </head>
 <body>
 <?php
+
+//revisar
         $servidor = "localhost";
         $baseDatos = "agenciaviajes";
         $usuario = "developer";
@@ -16,7 +18,7 @@
             $conexion = new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
             echo "Conectado correctamente";
             echo "<br>";
-            $conexion->beginTransaction();
+            $conexion->beginTransaction(); //comienza transaccion
             $falloConsultas=false;
 
             $sql = "INSERT INTO turista (nombre, apellido1, apellido2, direccion, telefono) VALUES ('Marina','Aparicio','Santos','Viso','614255555')";
@@ -53,10 +55,11 @@
 
 
             if ($falloConsultas) {
-                $conexion->rollBack();
+                $conexion->rollBack(); //Revierte los cambios llevados a cabo en la transacción actual.
+
                 echo "Cambio desecho";
             } else{
-                $conexion->commit();
+                $conexion->commit(); //confirmar transaccion
                 echo "Cambio confirmado";
             }
         } catch(PDOException $e){

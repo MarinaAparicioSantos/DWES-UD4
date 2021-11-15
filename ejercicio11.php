@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php
+    <?php //revisar
     $servidor = "localhost";
     $baseDatos = "agenciaviajes";
     $usuario = "developer";
@@ -21,7 +21,7 @@
     $nombre = "Iñigo";
     $apellido1 = "Montoya";
     $apellido2 = "Tu";
-    $direccion = "Mataste a mi padre";
+    $direccion = "hawaii";
     $telefono = "111111111";
 
 

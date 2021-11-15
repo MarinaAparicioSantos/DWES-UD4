@@ -42,7 +42,7 @@ if($error!=null){
     exit();
 }
 
-$result = mysqli_query($mysqli,"UPDATE `vuelos` SET `Origen`='Madrid' WHERE `id`='2323'");
+$result = mysqli_query($mysqli,"UPDATE `vuelos` SET `Origen`='Pamplona' WHERE `id`='1'");
 
 if($result == false){
 
@@ -65,7 +65,7 @@ if($error !=null){
     exit();
 }
 
-$result = mysqli_query($mysqli, "DELETE FROM  `vuelos` WHERE id='9800'");
+$result = mysqli_query($mysqli, "DELETE FROM  `vuelos` WHERE id='1'");
 if($result==false){
     echo "La consulta no ha funcionado correctamente.<br>";
 }

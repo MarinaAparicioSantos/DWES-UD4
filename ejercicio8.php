@@ -132,19 +132,19 @@
         cabeceraWapa();
         $turistas = $conexion->query($sql); // FETCH_BOUND USA BIND COLUMNS¿? ¿?¿?¿' XD WT
 
-        while ($turista = $turistas->fetch(PDO::FETCH_BOUND)) {
+        $turistas->execute();
+        $turistas->bindColumn(1, $nombre);
+        $turistas->bindColumn(2, $apellido1);
+        $turistas->bindColumn(3, $direccion);
+
+
+
+        while ($fila = $turistas->fetch(PDO::FETCH_BOUND)) {
+
             echo "<tr>";
-            echo "<td>";
-            echo $turista['nombre'];
-            echo "</td>";
-
-            echo "<td>";
-            echo $turista['apellido1'];
-            echo "</td>";
-
-            echo "<td>";
-            echo $turista['direccion'];
-            echo "</td>";
+            echo "<td>" . $nombre . "</td>";
+            echo "<td>" . $apellido1 . "</td>";
+            echo "<td>" . $direccion . "</td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -152,7 +152,6 @@
         echo "Connection failed: " . $e->getMessage();
     }
     //$conn = null;
-    ?>
     ?>
 
 </body>
