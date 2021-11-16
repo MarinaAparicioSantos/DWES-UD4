@@ -12,7 +12,6 @@
 
     <?php
 
-//comprobar
     $servidor = "localhost";
     $baseDatos = "agenciaviajes";
     $usuario = "developer";
@@ -30,12 +29,12 @@
         echo "<br>";
 
 
-        $sql = "UPDATE turista SET nombre='Melodia',apellido1='Flores',apellido2='Rosa',direccion='Carmona',telefono='607999451'WHERE id=2 OR id=3";
+        $sql = "UPDATE turista SET nombre='Melodia',apellido1='Flores',apellido2='Rosas',direccion='Carmona',telefono='607999451'WHERE id=2 OR id=3";
         $numeroClientesActualizados=$conexion->exec($sql);
         echo "Se han modificado $numeroClientesActualizados clientes.";
 
 
-        $sql = "DELETE FROM turista WHERE id=8";
+        $sql = "DELETE FROM turista WHERE id=16";
         $numeroClientesBorrados=$conexion->exec($sql);
         //$last_id = $conexion->lastInsertId();
         echo "Se han eliminado $numeroClientesBorrados clientes.";
