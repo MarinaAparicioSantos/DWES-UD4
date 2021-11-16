@@ -9,7 +9,7 @@
 <body>
 <?php
 
-//revisar
+//pdo
         $servidor = "localhost";
         $baseDatos = "agenciaviajes";
         $usuario = "developer";

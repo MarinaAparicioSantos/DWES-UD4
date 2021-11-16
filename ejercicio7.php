@@ -11,6 +11,8 @@
 <body>
 <?php
 
+//estilo orientado a objetos
+
 function creaConexion(){
 
     $mysqli = new mysqli('localhost', "developer", "developer", "agenciaviajes");

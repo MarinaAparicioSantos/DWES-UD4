@@ -12,6 +12,8 @@
 
     <?php
 
+    //pdo
+
 
     $servidor = "localhost";
     $baseDatos = "agenciaviajes";

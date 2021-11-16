@@ -12,6 +12,8 @@
 
     <?php
 
+    //estilo procesal
+
 function creaConexion(){
 
     $mysqli = mysqli_connect('localhost', "developer", "developer", "agenciaviajes");

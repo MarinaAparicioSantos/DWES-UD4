@@ -9,6 +9,8 @@
 <body>
     <?php
 
+    //estilo procesal
+
         @$mysqli = mysqli_connect('localhost','developer','developer','agenciaviajes');
         $error = mysqli_connect_errno($mysqli);
         if ($error!=null){
